@@ -1,0 +1,24 @@
+/* Complemento a Bootstrap: layout y detalles de la app */
+main.flex-grow-1 {
+    background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 48%);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.table td.actions {
+    white-space: nowrap;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.06);
+}
+
+.login-page {
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+}
