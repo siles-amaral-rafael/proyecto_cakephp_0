@@ -115,6 +115,39 @@ footer {
 .pagination .active .page-link {
     background-color: var(--mv-primary);
 }
+
+
+.form-control, .form-select {
+    border: 1px solid #eef0f2;
+    padding: 0.75rem 1rem;
+    background-color: #fcfcfd;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--mv-secondary);
+    box-shadow: 0 0 0 4px rgba(108, 92, 231, 0.1);
+    background-color: #fff;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+/* Ajuste para que los botones de CakePHP usen tu clase btn-success */
+button[type="submit"] {
+    @extend .btn-success; /* Si usaras SASS, pero como es CSS plano: */
+    background-color: var(--mv-primary);
+    border: none;
+    border-radius: 12px;
+    padding: 10px 24px;
+    color: white;
+    transition: all 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #5b4bc4;
+    transform: translateY(-1px);
+}
 </style>
 
 <?= $this->fetch('meta') ?>
