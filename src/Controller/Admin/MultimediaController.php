@@ -40,18 +40,22 @@ class MultimediaController extends AppController
      */
     public function add(): ?Response
     {
-        $item = $this->Multimedia->newEmptyEntity();
+        // Cambiamos el nombre de $item a $multimedia para que coincida con el compact
+        $multimedia = $this->Multimedia->newEmptyEntity();
+        
         if ($this->request->is('post')) {
-            $item = $this->Multimedia->patchEntity($item, $this->request->getData());
-            if ($this->Multimedia->save($item)) {
+            $multimedia = $this->Multimedia->patchEntity($multimedia, $this->request->getData());
+            
+            if ($this->Multimedia->save($multimedia)) {
                 $this->Flash->success(__('Registro guardado.'));
-
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('No se pudo guardar. Revise los datos.'));
         }
-        $this->set('multimedia', $item);
-
+        
+        // Ahora 'multimedia' sí existe como variable
+        $this->set(compact('multimedia'));
+        
         return null;
     }
 
