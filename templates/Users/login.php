@@ -7,7 +7,7 @@ $this->assign('title', __('Iniciar sesión'));
 <div class="login-page">
     <div class="card shadow border-0">
         <div class="card-body p-4 p-md-5">
-            <h1 class="h4 text-center mb-4 text-primary"><?= __('Acceso') ?></h1>
+            <h1 class="h4 text-center mb-4 text-primary"><?= __('Login') ?></h1>
             <?= $this->Form->create(null, ['url' => ['action' => 'login']]) ?>
             <?= $this->Form->control('correo', [
                 'label' => __('Correo electrónico'),
@@ -22,7 +22,7 @@ $this->assign('title', __('Iniciar sesión'));
                 'type' => 'password',
             ]) ?>
             <div class="d-grid gap-2 mt-4">
-                <?= $this->Form->button(__('Entrar'), ['class' => 'btn-lg']) ?>
+                <?= $this->Form->button(__('Ingresar'), ['class' => 'btn-lg']) ?>
             </div>
             <?= $this->Form->end() ?>
         </div>

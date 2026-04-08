@@ -2,7 +2,7 @@
 /**
  * @var \App\View\AppView $this
  */
-$appName = 'App EF';
+$appName = 'MediaVault';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -46,9 +46,11 @@ $appName = 'App EF';
                             <?= $this->Html->link(__('Entrar'), ['prefix' => false, 'controller' => 'Users', 'action' => 'login'], ['class' => 'nav-link active']) ?>
                         </li>
                     <?php endif; ?>
+                    <!--
                     <li class="nav-item">
                         <a class="nav-link" href="https://book.cakephp.org/5/" target="_blank" rel="noopener"><?= __('Docs CakePHP') ?></a>
                     </li>
+                     -->
                 </ul>
             </div>
         </div>
@@ -63,7 +65,7 @@ $appName = 'App EF';
 
     <footer class="py-3 mt-auto bg-white border-top">
         <div class="container text-center text-muted small">
-            <?= h($appName) ?> · CakePHP <?= h(\Cake\Core\Configure::version()) ?>
+            <?= h($appName) ?> · © 2026 RSA. Todos los derechos reservados.
         </div>
     </footer>
 
