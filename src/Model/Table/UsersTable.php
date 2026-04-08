@@ -39,6 +39,7 @@ class UsersTable extends Table
         $this->setTable('users');
         $this->setDisplayField('correo');
         $this->setPrimaryKey('id');
+        $this->addBehavior('Timestamp');
     }
 
     /**

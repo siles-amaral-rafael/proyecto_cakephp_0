@@ -41,20 +41,16 @@ class UsersController extends AppController
         $user = $this->Users->newEmptyEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
-            if ($this->request->getData('password') === '') {
-                $this->Flash->error(__('Debe indicar una contraseña.'));
-
-                return null;
-            }
+            
+            // Verifica si hubo errores de validación (incluyendo la contraseña que definimos en la Table)
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('Usuario guardado.'));
-
+                $this->Flash->success(__('Usuario guardado correctamente.'));
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('No se pudo guardar el usuario. Revise los datos.'));
+            
+            $this->Flash->error(__('No se pudo guardar el usuario. Por favor, verifica los campos marcados.'));
         }
         $this->set(compact('user'));
-
         return null;
     }
 
